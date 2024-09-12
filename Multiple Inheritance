@@ -1,0 +1,24 @@
+interface area 
+{
+    void area();
+}
+class volume
+{
+    public void volume()
+    {
+        System.out.println("Volume is 123");
+    }
+}
+public class circle extends volume  implements area
+{
+    public void area()
+    {
+        System.out.println("Area is 456");
+    }
+	public static void main(String[] args)
+	{
+		circle c=new circle();
+		c.area();
+		c.volume();
+	}
+}
