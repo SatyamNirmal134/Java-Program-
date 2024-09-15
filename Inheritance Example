@@ -1,0 +1,32 @@
+import java.util.Scanner;
+interface Shape 
+{
+    void getInput();
+    void area();
+}
+class Circle implements Shape 
+{
+    int radius;
+    double area;
+
+    public void getInput()
+{
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the radius of the Circle: ");
+        radius = s.nextInt();
+    }
+public void area() 
+{
+        area = 3.1416 * radius * radius;
+        System.out.println("Area of the circle is: " + area);
+    }
+}
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Shape s = new Circle();
+        s.getInput();
+        s.area();
+    }
+}
